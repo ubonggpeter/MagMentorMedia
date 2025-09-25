@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <!-- Homepage -->
+  <url>
+    <loc>https://www.magnusdigital.site/</loc>
+    <lastmod>2025-09-25</lastmod>
+    <priority>1.00</priority>
+  </url>
+
+  <!-- Index Page -->
+  <url>
+    <loc>https://www.magnusdigital.site/index.html</loc>
+    <lastmod>2025-09-25</lastmod>
+    <priority>0.90</priority>
+  </url>
+
+  <!-- Checkout Page -->
+  <url>
+    <loc>https://www.magnusdigital.site/checkout%20(8).html</loc>
+    <lastmod>2025-09-25</lastmod>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- Images -->
+  <url>
+    <loc>https://www.magnusdigital.site/MagnusC1.png</loc>
+    <lastmod>2025-09-25</lastmod>
+    <image:image>
+      <image:loc>https://www.magnusdigital.site/MagnusC1.png</image:loc>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://www.magnusdigital.site/MagnusC2.png</loc>
+    <lastmod>2025-09-25</lastmod>
+    <image:image>
+      <image:loc>https://www.magnusdigital.site/MagnusC2.png</image:loc>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://www.magnusdigital.site/MagnusC3.png</loc>
+    <lastmod>2025-09-25</lastmod>
+    <image:image>
+      <image:loc>https://www.magnusdigital.site/MagnusC3.png</image:loc>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://www.magnusdigital.site/MagnusC4.png</loc>
+    <lastmod>2025-09-25</lastmod>
+    <image:image>
+      <image:loc>https://www.magnusdigital.site/MagnusC4.png</image:loc>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://www.magnusdigital.site/MagnusC5.png</loc>
+    <lastmod>2025-09-25</lastmod>
+    <image:image>
+      <image:loc>https://www.magnusdigital.site/MagnusC5.png</image:loc>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://www.magnusdigital.site/MagnusC6.png</loc>
+    <lastmod>2025-09-25</lastmod>
+    <image:image>
+      <image:loc>https://www.magnusdigital.site/MagnusC6.png</image:loc>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://www.magnusdigital.site/MagnusC7.png</loc>
+    <lastmod>2025-09-25</lastmod>
+    <image:image>
+      <image:loc>https://www.magnusdigital.site/MagnusC7.png</image:loc>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://www.magnusdigital.site/MagnusC8.png</loc>
+    <lastmod>2025-09-25</lastmod>
+    <image:image>
+      <image:loc>https://www.magnusdigital.site/MagnusC8.png</image:loc>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://www.magnusdigital.site/MagnusP1.png</loc>
+    <lastmod>2025-09-25</lastmod>
+    <image:image>
+      <image:loc>https://www.magnusdigital.site/MagnusP1.png</image:loc>
+    </image:image>
+  </url>
+
+</urlset>
