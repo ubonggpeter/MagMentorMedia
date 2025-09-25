@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Purchases — Resale Rights &amp; Earnings Dashboard</title>
+<meta content="View your purchases, resale rights, and earnings. Download your items or resell with one click." name="description"/>
+<!-- Open Graph -->
+<meta content="website" property="og:type"/>
+<meta content="Purchases — Resale Rights &amp; Earnings Dashboard" property="og:title"/>
+<meta content="View purchases, resale rights, and earnings. Download or resell with one click." property="og:description"/>
+<meta content="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&amp;w=1200&amp;auto=format&amp;fit=crop" property="og:image"/>
+<meta content="https://example.com/purchases" property="og:url"/>
+<!-- Twitter -->
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Purchases — Resale Rights &amp; Earnings Dashboard" name="twitter:title"/>
+<meta content="View purchases, resale rights, and earnings. Download or resell with one click." name="twitter:description"/>
+<meta content="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&amp;w=1200&amp;auto=format&amp;fit=crop" name="twitter:image"/>
+<!-- Tailwind CSS (CDN) -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            bg: '#0E0F13',
+            card: '#14161C',
+            line: '#1D2028',
+            text: '#F5F6FA',
+            sub: '#BFC6D6',
+            mag: '#ff7a00',
+            mag2: '#ffa441',
+            pill: '#232632',
+            success: '#19c37d',
+          },
+          borderRadius: { phone: '22px' },
+          boxShadow: {
+            glass: '0 12px 40px rgba(0,0,0,.35)',
+            insetLine: 'inset 0 0 0 1px rgba(255,255,255,.06)'
+          }
+        }
+      }
+    }
+  </script>
+<!-- Schema.org JSON-LD -->
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Purchases — Resale Rights & Earnings Dashboard",
+    "url": "https://example.com/purchases",
+    "description": "Dashboard for managing purchased products, resale rights, and downloads.",
+    "about": {
+      "@type": "Organization",
+      "name": "Magnus Digital",
+      "url": "https://example.com",
+      "logo": "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=400&auto=format&fit=crop"
+    },
+    "mainEntity": [
+      {
+        "@type": "Product",
+        "name": "Premium Trading Package",
+        "category": "Tools",
+        "offers": {
+          "@type": "Offer",
+          "price": "299.99",
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock"
+        }
+      },
+      {
+        "@type": "Product",
+        "name": "Beginner Trading Course",
+        "category": "Courses",
+        "offers": {
+          "@type": "Offer",
+          "price": "149.99",
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock"
+        }
+      }
+    ]
+  }
+  </script>
+<style>
+    .gradient-btn { background: linear-gradient(135deg, #ff7a00 0%, #ffa441 100%); }
+    .chip { background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.03)); }
+  </style>
+</head>
+<body class="bg-bg text-text min-h-screen antialiased">
+<!-- Top App Bar -->
+<header class="sticky top-0 z-40 border-b border-line/60 bg-bg/90 backdrop-blur">
+<div class="max-w-6xl mx-auto px-4 py-3 flex items-center gap-3">
+<!-- Hamburger -->
+<button aria-label="Menu" class="p-2 rounded-lg hover:bg-pill">
+<!-- Heroicon: Bars-3 -->
+<svg class="w-6 h-6 text-sub" fill="none" stroke="currentColor" stroke-width="1.8" viewbox="0 0 24 24">
+<path d="M3.75 6.75h16.5M3.75 12h16.5M3.75 17.25h16.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+<!-- Breadcrumb -->
+<nav class="text-sub text-sm flex-1">
+<span class="opacity-90">Pages</span>
+<span class="mx-1 opacity-40">›</span>
+<span class="text-text">Purchases</span>
+</nav>
+<!-- Bell with badge -->
+<button aria-label="Notifications" class="relative p-2 rounded-lg hover:bg-pill">
+<svg class="w-6 h-6 text-sub" fill="none" stroke="currentColor" stroke-width="1.8" viewbox="0 0 24 24">
+<path d="M14.25 18.75a2.25 2.25 0 01-4.5 0m9-6v-1.125A6.375 6.375 0 006.375 5.25v.375a2.25 2.25 0 01-1.5 2.122 4.5 4.5 0 00-.75 2.453V12.75l-1.5 1.5h18l-1.5-1.5z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span class="absolute -top-0.5 -right-0.5 text-[11px] font-semibold bg-mag text-black rounded-full px-1.5">3</span>
+</button>
+<!-- Avatar -->
+<div class="w-8 h-8 rounded-full bg-[url('https://images.unsplash.com/photo-1607746882042-944635dfe10e?q=80&amp;w=200&amp;auto=format&amp;fit=crop')] bg-cover bg-center ring-2 ring-line/70"></div>
+</div>
+</header>
+<!-- Content -->
+<main class="max-w-6xl mx-auto px-4 pt-6 pb-28">
+<!-- Stat Cards -->
+<section class="grid grid-cols-2 gap-4">
+<div class="col-span-2 mb-6 p-4 rounded-2xl bg-card text-center">
+<h2 class="text-xl font-bold text-white mb-2">Earn ₦5,000 hourly &amp; up to ₦1M monthly on Magnus</h2>
+<p class="text-green-400 text-base">Get certified by purchasing a skill today and unlock instant access to high-paying jobs.</p>
+</div><div class="rounded-2xl bg-card shadow-glass shadow-insetLine p-5">
+<div class="text-sub text-sm mb-2">Resale Rights</div>
+<div class="text-3xl font-semibold text-text">8</div>
+</div>
+<div class="rounded-2xl bg-card shadow-glass shadow-insetLine p-5">
+<div class="text-sub text-sm mb-2">Resale Earnings</div>
+<div class="text-3xl font-semibold text-success">$486</div>
+</div>
+<div class="rounded-2xl bg-card shadow-glass shadow-insetLine p-5 flex items-center justify-center text-sub">
+<div class="flex items-center gap-2">
+<svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24"><path d="M12 2a10 10 0 1010 10A10.011 10.011 0 0012 2zm1 15h-2v-2h2zm0-4h-2V7h2z"></path></svg>
+<span>Activity</span>
+</div>
+</div>
+</section>
+<!-- Product Cards (FORCE HORIZONTAL: always 2 columns) -->
+<section class="mt-6 grid grid-cols-2 gap-5">
+<!-- Card 1 -->
+<article class="rounded-2xl bg-card shadow-glass shadow-insetLine overflow-hidden">
+<div class="relative h-40">
+<img alt="Premium Trading Package" class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&amp;w=1200&amp;auto=format&amp;fit=crop"/>
+<div class="absolute top-3 left-3 flex flex-col items-start gap-2">
+<span class="chip text-[13px] px-3 py-1 rounded-full border border-white/10 flex items-center gap-1">
+<svg class="w-4 h-4" fill="currentColor" viewbox="0 0 24 24"><path d="M7 7h10v10H7zM5 5h14v14H5zM9 9h6v6H9z"></path></svg>
+              Resale Rights
+            </span>
+<span class="px-2.5 py-1 rounded-full bg-green-600/90 text-black text-[12px] font-semibold">3/5 downloads</span>
+</div>
+</div>
+<div class="p-5">
+<div class="mb-2">
+<span class="text-[12px] text-sub bg-pill px-2 py-1 rounded-full">Tools</span>
+</div>
+<h3 class="text-lg font-semibold">Premium Trading Package</h3>
+<p class="text-sub text-sm mt-1">Purchased for: <span class="line-through text-sub mr-2">₦39,530</span><span class="text-mag2 font-semibold">₦28,500</span></p>
+<div class="mt-4 flex flex-col gap-3">
+<button class="hover:opacity-90 shadow text-black px-4 py-3 rounded-xl transition w-full font-semibold gradient-btn" data-modal="apply" data-title="Premium Trading Package">Apply Now</button>
+<button class="bg-pill hover:bg-line px-4 py-3 rounded-xl transition w-full text-sub font-semibold" data-modal="resale" data-title="Premium Trading Package">
+              Resale
+            </button>
+</div>
+</div>
+</article>
+<!-- Card 2 -->
+<article class="rounded-2xl bg-card shadow-glass shadow-insetLine overflow-hidden">
+<div class="relative h-40">
+<img alt="Beginner Trading Course" class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1491841550275-ad7854e35ca6?q=80&amp;w=1200&amp;auto=format&amp;fit=crop"/>
+<div class="absolute top-3 left-3 flex flex-col items-start gap-2">
+<span class="chip text-[13px] px-3 py-1 rounded-full border border-white/10 flex items-center gap-1">
+<svg class="w-4 h-4" fill="currentColor" viewbox="0 0 24 24"><path d="M7 7h10v10H7zM5 5h14v14H5zM9 9h6v6H9z"></path></svg>
+              Resale Rights
+            </span>
+<span class="px-2.5 py-1 rounded-full bg-green-600/90 text-black text-[12px] font-semibold">1/∞ downloads</span>
+</div>
+</div>
+<div class="p-5">
+<div class="mb-2">
+<span class="text-[12px] text-sub bg-pill px-2 py-1 rounded-full">Courses</span>
+</div>
+<h3 class="text-lg font-semibold">Beginner Trading Course</h3>
+<p class="text-sub text-sm mt-1">Purchased for: <span class="line-through text-sub mr-2">₦21,768</span><span class="text-mag2 font-semibold">₦17,500</span></p>
+<div class="mt-4 flex flex-col gap-3">
+<button class="hover:opacity-90 shadow text-black px-4 py-3 rounded-xl transition w-full font-semibold gradient-btn" data-modal="apply" data-title="Beginner Trading Course">Apply Now</button>
+<button class="bg-pill hover:bg-line px-4 py-3 rounded-xl transition w-full text-sub font-semibold" data-modal="resale" data-title="Beginner Trading Course">
+              Resale
+            </button>
+</div>
+</div>
+</article>
+<article class="rounded-2xl bg-card shadow-glass shadow-insetLine overflow-hidden">
+<div class="relative h-40">
+<img alt="Premium Trading Package #3" class="w-full h-full object-cover" src="https://picsum.photos/seed/3/1200/600"/>
+<div class="absolute top-3 left-3 flex flex-col items-start gap-2">
+<span class="chip text-[13px] px-3 py-1 rounded-full border border-white/10 flex items-center gap-1">
+<svg class="w-4 h-4" fill="currentColor" viewbox="0 0 24 24"><path d="M7 7h10v10H7zM5 5h14v14H5zM9 9h6v6H9z"></path></svg>
+              Resale Rights
+            </span>
+<span class="px-2.5 py-1 rounded-full bg-green-600/90 text-black text-[12px] font-semibold">3/5 downloads</span>
+</div>
+</div>
+<div class="p-5">
+<div class="mb-2">
+<span class="text-[12px] text-sub bg-pill px-2 py-1 rounded-full">Tools</span>
+</div>
+<h3 class="text-lg font-semibold">Premium Trading Package #3</h3>
+<p class="text-sub text-sm mt-1">Purchased for: <span class="line-through text-sub mr-2">₦13,437</span><span class="text-mag2 font-semibold">₦11,000</span></p>
+<div class="mt-4 flex flex-col gap-3">
+<button class="hover:opacity-90 shadow font-semibold px-4 py-3 rounded-xl transition w-full text-black gradient-btn" data-modal="apply" data-title="Premium Trading Package">Apply Now</button>
+<button class="bg-pill hover:bg-line px-4 py-3 rounded-xl transition w-full text-sub font-semibold" data-modal="resale" data-title="Premium Trading Package">
+              Resale
+            </button>
+</div>
+</div>
+</article><article class="rounded-2xl bg-card shadow-glass shadow-insetLine overflow-hidden">
+<div class="relative h-40">
+<img alt="Beginner Trading Course #4" class="w-full h-full object-cover" src="https://picsum.photos/seed/4/1200/600"/>
+<div class="absolute top-3 left-3 flex flex-col items-start gap-2">
+<span class="chip text-[13px] px-3 py-1 rounded-full border border-white/10 flex items-center gap-1">
+<svg class="w-4 h-4" fill="currentColor" viewbox="0 0 24 24"><path d="M7 7h10v10H7zM5 5h14v14H5zM9 9h6v6H9z"></path></svg>
+              Resale Rights
+            </span>
+<span class="px-2.5 py-1 rounded-full bg-green-600/90 text-black text-[12px] font-semibold">1/∞ downloads</span>
+</div>
+</div>
+<div class="p-5">
+<div class="mb-2">
+<span class="text-[12px] text-sub bg-pill px-2 py-1 rounded-full">Courses</span>
+</div>
+<h3 class="text-lg font-semibold">Beginner Trading Course #4</h3>
+<p class="text-sub text-sm mt-1">Purchased for: <span class="line-through text-sub mr-2">₦36,638</span><span class="text-mag2 font-semibold">₦28,500</span></p>
+<div class="mt-4 flex flex-col gap-3">
+<button class="hover:opacity-90 shadow font-semibold px-4 py-3 rounded-xl transition w-full text-black gradient-btn" data-modal="apply" data-title="Beginner Trading Course">Apply Now</button>
+<button class="bg-pill hover:bg-line px-4 py-3 rounded-xl transition w-full text-sub font-semibold" data-modal="resale" data-title="Beginner Trading Course">
+              Resale
+            </button>
+</div>
+</div>
+</article><article class="rounded-2xl bg-card shadow-glass shadow-insetLine overflow-hidden">
+<div class="relative h-40">
+<img alt="Premium Trading Package #5" class="w-full h-full object-cover" src="https://picsum.photos/seed/5/1200/600"/>
+<div class="absolute top-3 left-3 flex flex-col items-start gap-2">
+<span class="chip text-[13px] px-3 py-1 rounded-full border border-white/10 flex items-center gap-1">
+<svg class="w-4 h-4" fill="currentColor" viewbox="0 0 24 24"><path d="M7 7h10v10H7zM5 5h14v14H5zM9 9h6v6H9z"></path></svg>
+              Resale Rights
+            </span>
+<span class="px-2.5 py-1 rounded-full bg-green-600/90 text-black text-[12px] font-semibold">3/5 downloads</span>
+</div>
+</div>
+<div class="p-5">
+<div class="mb-2">
+<span class="text-[12px] text-sub bg-pill px-2 py-1 rounded-full">Tools</span>
+</div>
+<h3 class="text-lg font-semibold">Premium Trading Package #5</h3>
+<p class="text-sub text-sm mt-1">Purchased for: <span class="line-through text-sub mr-2">₦23,444</span><span class="text-mag2 font-semibold">₦17,500</span></p>
+<div class="mt-4 flex flex-col gap-3">
+<button class="hover:opacity-90 shadow font-semibold px-4 py-3 rounded-xl transition w-full text-black gradient-btn" data-modal="apply" data-title="Premium Trading Package">Apply Now</button>
+<button class="bg-pill hover:bg-line px-4 py-3 rounded-xl transition w-full text-sub font-semibold" data-modal="resale" data-title="Premium Trading Package">
+              Resale
+            </button>
+</div>
+</div>
+</article><article class="rounded-2xl bg-card shadow-glass shadow-insetLine overflow-hidden">
+<div class="relative h-40">
+<img alt="Beginner Trading Course #6" class="w-full h-full object-cover" src="https://picsum.photos/seed/6/1200/600"/>
+<div class="absolute top-3 left-3 flex flex-col items-start gap-2">
+<span class="chip text-[13px] px-3 py-1 rounded-full border border-white/10 flex items-center gap-1">
+<svg class="w-4 h-4" fill="currentColor" viewbox="0 0 24 24"><path d="M7 7h10v10H7zM5 5h14v14H5zM9 9h6v6H9z"></path></svg>
+              Resale Rights
+            </span>
+<span class="px-2.5 py-1 rounded-full bg-green-600/90 text-black text-[12px] font-semibold">1/∞ downloads</span>
+</div>
+</div>
+<div class="p-5">
+<div class="mb-2">
+<span class="text-[12px] text-sub bg-pill px-2 py-1 rounded-full">Courses</span>
+</div>
+<h3 class="text-lg font-semibold">Beginner Trading Course #6</h3>
+<p class="text-sub text-sm mt-1">Purchased for: <span class="line-through text-sub mr-2">₦14,453</span><span class="text-mag2 font-semibold">₦11,000</span></p>
+<div class="mt-4 flex flex-col gap-3">
+<button class="hover:opacity-90 shadow font-semibold px-4 py-3 rounded-xl transition w-full text-black gradient-btn" data-modal="apply" data-title="Beginner Trading Course">Apply Now</button>
+<button class="bg-pill hover:bg-line px-4 py-3 rounded-xl transition w-full text-sub font-semibold" data-modal="resale" data-title="Beginner Trading Course">
+              Resale
+            </button>
+</div>
+</div>
+</article><article class="rounded-2xl bg-card shadow-glass shadow-insetLine overflow-hidden">
+<div class="relative h-40">
+<img alt="Premium Trading Package #7" class="w-full h-full object-cover" src="https://picsum.photos/seed/7/1200/600"/>
+<div class="absolute top-3 left-3 flex flex-col items-start gap-2">
+<span class="chip text-[13px] px-3 py-1 rounded-full border border-white/10 flex items-center gap-1">
+<svg class="w-4 h-4" fill="currentColor" viewbox="0 0 24 24"><path d="M7 7h10v10H7zM5 5h14v14H5zM9 9h6v6H9z"></path></svg>
+              Resale Rights
+            </span>
+<span class="px-2.5 py-1 rounded-full bg-green-600/90 text-black text-[12px] font-semibold">3/5 downloads</span>
+</div>
+</div>
+<div class="p-5">
+<div class="mb-2">
+<span class="text-[12px] text-sub bg-pill px-2 py-1 rounded-full">Tools</span>
+</div>
+<h3 class="text-lg font-semibold">Premium Trading Package #7</h3>
+<p class="text-sub text-sm mt-1">Purchased for: <span class="line-through text-sub mr-2">₦36,685</span><span class="text-mag2 font-semibold">₦28,500</span></p>
+<div class="mt-4 flex flex-col gap-3">
+<button class="hover:opacity-90 shadow font-semibold px-4 py-3 rounded-xl transition w-full text-black gradient-btn" data-modal="apply" data-title="Premium Trading Package">Apply Now</button>
+<button class="bg-pill hover:bg-line px-4 py-3 rounded-xl transition w-full text-sub font-semibold" data-modal="resale" data-title="Premium Trading Package">
+              Resale
+            </button>
+</div>
+</div>
+</article><article class="rounded-2xl bg-card shadow-glass shadow-insetLine overflow-hidden">
+<div class="relative h-40">
+<img alt="Beginner Trading Course #8" class="w-full h-full object-cover" src="https://picsum.photos/seed/8/1200/600"/>
+<div class="absolute top-3 left-3 flex flex-col items-start gap-2">
+<span class="chip text-[13px] px-3 py-1 rounded-full border border-white/10 flex items-center gap-1">
+<svg class="w-4 h-4" fill="currentColor" viewbox="0 0 24 24"><path d="M7 7h10v10H7zM5 5h14v14H5zM9 9h6v6H9z"></path></svg>
+              Resale Rights
+            </span>
+<span class="px-2.5 py-1 rounded-full bg-green-600/90 text-black text-[12px] font-semibold">1/∞ downloads</span>
+</div>
+</div>
+<div class="p-5">
+<div class="mb-2">
+<span class="text-[12px] text-sub bg-pill px-2 py-1 rounded-full">Courses</span>
+</div>
+<h3 class="text-lg font-semibold">Beginner Trading Course #8</h3>
+<p class="text-sub text-sm mt-1">Purchased for: <span class="line-through text-sub mr-2">₦24,126</span><span class="text-mag2 font-semibold">₦17,500</span></p>
+<div class="mt-4 flex flex-col gap-3">
+<button class="hover:opacity-90 shadow font-semibold px-4 py-3 rounded-xl transition w-full text-black gradient-btn" data-modal="apply" data-title="Beginner Trading Course">Apply Now</button>
+<button class="bg-pill hover:bg-line px-4 py-3 rounded-xl transition w-full text-sub font-semibold" data-modal="resale" data-title="Beginner Trading Course">
+              Resale
+            </button>
+</div>
+</div>
+</article></section>
+</main>
+<!-- Bottom Nav -->
+<nav class="fixed bottom-4 inset-x-0 flex justify-center z-40">
+<div class="w-[92%] md:w-[560px] bg-gradient-to-br from-mag to-mag2 text-black rounded-[28px] shadow-glass px-5 py-3">
+<ul class="flex items-center justify-between text-sm font-semibold">
+<li class="flex flex-col items-center gap-1">
+<svg class="w-6 h-6" fill="currentColor" viewbox="0 0 24 24"><path d="M12 3l9 8h-3v9H6v-9H3l9-8z"></path></svg>
+<span>Home</span>
+</li>
+<li class="flex flex-col items-center gap-1">
+<svg class="w-6 h-6" fill="currentColor" viewbox="0 0 24 24"><path d="M12 12a5 5 0 100-10 5 5 0 000 10zm-9 9a9 9 0 1118 0H3z"></path></svg>
+<span>Profile</span>
+</li>
+<li class="flex flex-col items-center gap-1">
+<svg class="w-6 h-6" fill="currentColor" viewbox="0 0 24 24"><path d="M4 4h16v12H5.17L4 17.17V4zm2 3h12v2H6V7zm0 4h8v2H6v-2z"></path></svg>
+<span>Messages</span>
+</li>
+<li class="flex flex-col items-center gap-1">
+<svg class="w-6 h-6" fill="currentColor" viewbox="0 0 24 24"><path d="M12 8a4 4 0 100 8 4 4 0 000-8zm8 3h-1.09a7.967 7.967 0 00-1.1-2.65l.77-.77 1.42-1.42-2.83-2.83-1.42 1.42-.77.77A7.967 7.967 0 0013 3.09V2h-2v1.09A7.967 7.967 0 008.35 4.2l-.77-.77-1.42-1.42L3.33 4.84l1.42 1.42.77.77A7.967 7.967 0 004.09 11H3v2h1.09a7.967 7.967 0 001.1 2.65l-.77.77-1.42 1.42 2.83 2.83 1.42-1.42.77-.77A7.967 7.967 0 0011 20.91V22h2v-1.09a7.967 7.967 0 002.65-1.1l.77.77 1.42 1.42 2.83-2.83-1.42-1.42-.77-.77A7.967 7.967 0 0019.91 13H21v-2z"></path></svg>
+<span>Settings</span>
+</li>
+</ul>
+</div>
+</nav>
+<!-- Modal (download/resale) -->
+<div class="fixed inset-0 z-50 hidden items-end sm:items-center justify-center" id="modal">
+<div class="absolute inset-0 bg-black/60" data-close=""></div>
+<div class="relative w-full sm:w-[520px] bg-card rounded-t-3xl sm:rounded-2xl border border-line shadow-glass p-5">
+<div class="flex items-start justify-between gap-4">
+<div>
+<h4 class="text-xl font-semibold" id="modalTitle">Action</h4>
+<p class="text-sub mt-1" id="modalSubtitle">Continue with your action below.</p>
+</div>
+<button aria-label="Close" class="p-2 rounded-lg hover:bg-pill" data-close="">
+<svg class="w-6 h-6 text-sub" fill="none" stroke="currentColor" stroke-width="1.8" viewbox="0 0 24 24"><path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+</button>
+</div>
+<div class="mt-4">
+<div class="hidden" id="downloadBlock">
+<div class="rounded-xl border border-line p-4 bg-pill/40">
+<p class="text-sm text-sub">You are about to download <span class="font-semibold text-text" id="dlName">—</span>. Confirm to begin.</p>
+</div>
+<div class="mt-4 flex gap-3">
+<button class="flex-1 gradient-btn text-black font-semibold px-4 py-3 rounded-xl">Confirm Download</button>
+<button class="flex-1 bg-pill text-sub font-semibold px-4 py-3 rounded-xl" data-close="">Cancel</button>
+</div>
+</div>
+<div class="hidden" id="resaleBlock">
+<div class="rounded-xl border border-line p-4 bg-pill/40">
+<ul class="text-sm text-sub list-disc pl-5 space-y-1">
+<li>Resale license active for this item.</li>
+<li>Commission is paid on every sale.</li>
+<li>Provide your buyer with access link after purchase.</li>
+</ul>
+</div>
+<div class="mt-4 flex gap-3">
+<button class="flex-1 gradient-btn text-black font-semibold px-4 py-3 rounded-xl">Create Resale Link</button>
+<button class="flex-1 bg-pill text-sub font-semibold px-4 py-3 rounded-xl" data-close="">Cancel</button>
+</div>
+</div>
+</div>
+<div class="hidden mt-4" id="errorBlock">
+<div class="rounded-xl border border-line p-4 bg-[rgba(255,71,87,0.15)]">
+<p class="text-sm"><span class="font-semibold text-white">Action blocked:</span>
+            You must <span class="font-semibold text-white">apply to acquire a skill</span>. 
+            You’ll get access to earn immediately after your application and certification.</p>
+</div>
+<div class="mt-4 flex gap-3">
+<button class="flex-1 gradient-btn text-black font-semibold px-4 py-3 rounded-xl" data-open-apply="">Apply Now</button>
+<button class="flex-1 bg-pill text-sub font-semibold px-4 py-3 rounded-xl" data-close="">Close</button>
+</div>
+</div>
+<div class="hidden mt-4" id="applyBlock">
+<div class="rounded-xl border border-line p-4 bg-pill/40">
+<p class="text-sm text-sub">Start your certification application for <span class="font-semibold text-white" id="applyName">—</span>. Choose your skill and submit to unlock earning access.</p>
+</div>
+<div class="mt-4 flex gap-3">
+<button class="flex-1 gradient-btn text-black font-semibold px-4 py-3 rounded-xl" id="startApplicationBtn">Start Application</button>
+<button class="flex-1 bg-pill text-sub font-semibold px-4 py-3 rounded-xl" data-close="">Cancel</button>
+</div>
+</div>
+</div>
+</div>
+<!-- JS: Popup handling -->
+<script>
+    const modal = document.getElementById('modal');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalSubtitle = document.getElementById('modalSubtitle');
+    const dlName = document.getElementById('dlName');
+    const downloadBlock = document.getElementById('downloadBlock');
+    const applyBlock = document.getElementById('applyBlock');
+    const errorBlock = document.getElementById('errorBlock');
+    const applyName = document.getElementById('applyName');
+    const resaleBlock = document.getElementById('resaleBlock');
+    let selectedItem = null;
+    function parseNaira(txt){ try{ return parseInt(String(txt).replace(/[^0-9]/g,''),10)||0; }catch(e){ return 0; } }
+
+    function openModal(type, title) {
+      modal.classList.remove('hidden');
+      dlName.textContent = title;
+
+      // reset
+      downloadBlock.classList.add('hidden');
+      resaleBlock.classList.add('hidden');
+      if (applyBlock) applyBlock.classList.add('hidden');
+      if (errorBlock) errorBlock.classList.add('hidden');
+
+      if (type === 'download') {
+        modalTitle.textContent = 'Download';
+        modalSubtitle.textContent = 'Confirm your download.';
+        downloadBlock.classList.remove('hidden');
+      } else if (type === 'apply') {
+        modalTitle.textContent = 'Apply Now';
+        modalSubtitle.textContent = 'Get certified and unlock earning access.';
+        if (applyName) applyName.textContent = title || 'Selected Skill';
+        if (applyBlock) applyBlock.classList.remove('hidden');
+      } else if (type === 'error') {
+        modalTitle.textContent = 'Action Required';
+        modalSubtitle.textContent = 'Application needed to proceed.';
+        if (errorBlock) errorBlock.classList.remove('hidden');
+      } else {
+        modalTitle.textContent = 'Resale';
+        modalSubtitle.textContent = 'Generate a resale link for your buyers.';
+        resaleBlock.classList.remove('hidden');
+      }
+      // lock scroll on mobile
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+      modal.classList.add('hidden');
+      document.body.style.overflow = '';
+    }
+
+    document.querySelectorAll('[data-modal]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        openModal(btn.dataset.modal, btn.dataset.title || '');
+      });
+    });
+
+    modal.addEventListener('click', (e) => {
+      if (e.target.hasAttribute('data-close')) closeModal();
+    });
+
+    // Escape to close
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !modal.classList.contains('hidden')) closeModal();
+    });
+  
+    // open apply from error
+    modal.addEventListener('click', (e) => {
+      const t = e.target;
+      if (t && t.hasAttribute('data-open-apply')) {
+        openModal('apply', 'Certification');
+      }
+    });
+
+    // Blocked clicks: resale buttons and bottom nav items
+    document.querySelectorAll("button[data-modal='resale']").forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        openModal('error');
+      });
+    });
+    // Bottom nav items (icons/text) — treat all li as blocked entries
+    document.querySelectorAll("nav.fixed ul li").forEach(li => {
+      li.style.cursor = 'not-allowed';
+      li.addEventListener('click', (e) => {
+        e.preventDefault();
+        openModal('error');
+      });
+    });
+
+    // Capture selected product (name + price) when "Apply Now" is clicked from a card
+    document.querySelectorAll("[data-modal='apply']").forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        const card = e.currentTarget.closest('article');
+        const nameEl = card ? card.querySelector('h3') : null;
+        const priceEl = card ? card.querySelector('p.text-sub span.text-mag2') : null;
+        const name = nameEl ? nameEl.textContent.trim() : (btn.dataset.title || 'Selected Skill');
+        const price = priceEl ? parseNaira(priceEl.textContent) : 0;
+        selectedItem = { name, price, qty: 1 };
+      }, { capture: true });
+    });
+    </script>
+</body>
+</html>
