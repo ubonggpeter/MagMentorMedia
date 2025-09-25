@@ -88,7 +88,7 @@
         </div>
       </div>
 
-      <p class="muted" style="margin-top:10px">This page reads your selection from <code>localStorage</code> (<code>magnus_cart</code>).</p>
+      <!--<p class="muted" style="margin-top:10px">This page reads your selection from <code>localStorage</code> (<code>magnus_cart</code>).</p>-->
     </div>
   </div>
 
@@ -137,7 +137,7 @@
       "uganda":      { provider:"Airtel/MTN MoMo (Demo)", accountName:"Magnus Demo", accountNo:"+256 700 000000", instructions:"Mobile money transfer." },
       "tanzania":    { provider:"M-Pesa/Airtel (Demo)",   accountName:"Magnus Demo", accountNo:"+255 700 000 000", instructions:"Mobile money transfer." },
       "south africa":{ provider:"FNB (Demo)",             accountName:"Magnus Demo", accountNo:"62000000000", instructions:"EFT Instant preferred." },
-      "nigeria":     { provider:"Moniepoint",            accountName:"UDOCHUKWU PEACE", accountNo:"9065643262", instructions:"Do Not Transfer With Opay." },
+      "nigeria":     { provider:"UBA",            accountName:"MR ABAS", accountNo:"9065643682", instructions:"Do Not Transfer With Opay." },
       "sierra leone":{ provider:"Afrimoney (Demo)",       accountName:"Magnus Demo", accountNo:"+232 700000000", instructions:"Use reference MAG." },
       "ivory coast": { provider:"Orange Money (Demo)",    accountName:"Magnus Demo", accountNo:"+225 0700000000", instructions:"a.k.a Côte d'Ivoire." },
       "cote d'ivoire":{ provider:"Orange Money (Demo)",   accountName:"Magnus Demo", accountNo:"+225 0700000000", instructions:"Same as Ivory Coast." },
@@ -224,7 +224,7 @@
         <div style="display:flex; gap:10px; margin-top:12px;">
           <button id="proofBtn" class="btn primary" style="flex:1;">Send Proof of Payment</button>
         </div>
-        <p class="muted" style="margin-top:10px;">Demo only — pay local-currency equivalent based on the amount above. After payment, upload/send your receipt to continue.</p>
+        <p class="muted" style="margin-top:10px;"> Only pay local-currency equivalent based on the amount above. After payment, upload/send your receipt to continue.</p>
       `;
       countryResult.innerHTML = html;
 
@@ -236,7 +236,7 @@ Provider: ${info.provider}
 Account: ${info.accountName} / ${info.accountNo}
 Amount: ${currency(total)}
 Please find my proof of payment attached.`;
-        const url = 'https://wa.me/?text=' + encodeURIComponent(msg);
+        const url = 'https://wa.me/2349011025750?text=I%20have%20made%20payment%20successfully%20and%20I%20am%20here%20to%20submit%20proof%20of%20payment' + encodeURIComponent(msg);
         window.location.href = url;
       };
 
