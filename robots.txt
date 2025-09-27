@@ -1,9 +1,0 @@
-# robots.txt for https://www.magnusdigital.site
-User-agent: *
-Allow: /
-
-# Crawl-delay can be uncommented if needed:
-# Crawl-delay: 5
-
-Sitemap: https://www.magnusdigital.site/sitemap.xml
-Host: www.magnusdigital.site
