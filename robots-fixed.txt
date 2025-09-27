@@ -1,0 +1,8 @@
+# robots.txt for https://www.magnusdigital.site
+# Google ignores non-standard directives like "Host" and "Crawl-delay".
+# Keep it simple and valid for all crawlers.
+
+User-agent: *
+Allow: /
+
+Sitemap: https://www.magnusdigital.site/sitemap.xml
